@@ -7,7 +7,6 @@ This repository contains a minimal, educational implementation of the Strategy p
 
 ## Project structure
 - src/main/java/ma/enset — Java source files (strategies, context, and example/main classes)
-- src/test — (optional) tests
 
 ## Mermaid diagram
 Below is a simple mermaid class diagram explaining the relationships in this project.
@@ -23,28 +22,19 @@ classDiagram
       <<interface>>
       +algorithm()
     }
-    class ConcreteStrategyA {
+    class StrategyImpl1 {
       +algorithm()
     }
-    class ConcreteStrategyB {
+    class StrategyImpl2 {
       +algorithm()
     }
 
     Context --> Strategy
-    Strategy <|-- ConcreteStrategyA
-    Strategy <|-- ConcreteStrategyB
-    Context o-- ConcreteStrategyA : uses
-    Context o-- ConcreteStrategyB : uses
+    Strategy <|-- StrategyImpl1
+    Strategy <|-- StrategyImpl2
+    Context o-- StrategyImpl1 : uses
+    Context o-- StrategyImpl2 : uses
 ```
-
-## How to run
-1. Open the project in your preferred IDE and run the main class under `src/main/java/ma/enset`.
-2. Or build and run from the command line:
-   - With Maven (if a pom.xml exists): `mvn clean compile` then run the main class via your IDE or `java -cp target/classes <main-class>`
-   - Plain javac: `javac -d out $(find src/main/java -name "*.java")` then `java -cp out <main-class>`
-
-Note: Replace `<main-class>` with the actual fully-qualified main class name in the project (e.g., `ma.enset.App`).
-
 ## Contributing
 Feel free to open issues or pull requests to add examples, tests, or documentation.
 
