@@ -35,8 +35,3 @@ classDiagram
     Context o-- StrategyImpl1 : uses
     Context o-- StrategyImpl2 : uses
 ```
-## Contributing
-Feel free to open issues or pull requests to add examples, tests, or documentation.
-
-## License
-Add a license file if you want to make the project open-source.
